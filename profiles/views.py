@@ -6,7 +6,7 @@ from .models import Profile
 from .serializers import ProfileSerializer
 from drf_api.permissions import IsOwnerOrReadOnly
 
-# Create your views here.
+
 class ProfileList(APIView):
     """
     List all profiles
@@ -16,8 +16,9 @@ class ProfileList(APIView):
         profiles = Profile.objects.all()
         serializer = ProfileSerializer(
             profiles, many=True, context={'request': request}
-            )
+        )
         return Response(serializer.data)
+
 
 class ProfileDetail(APIView):
     serializer_class = ProfileSerializer
