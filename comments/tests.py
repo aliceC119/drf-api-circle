@@ -1,17 +1,15 @@
 from rest_framework.test import APITestCase 
 from rest_framework import status 
-from django.urls import reverse 
 from django.contrib.auth.models import User 
 from .models import Comment
 
-class CommentTests(APITestCase):
+class CommenListTests(APITestCase):
     def setUp(self):
         self.user= User.objects.create_user(username='adam', password='pass')
        
     
     def test_can_list_comments(self):
         adam = User.objects.get(username='adam')
-        
         response = self.client.get('/comments/')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         print(response.data)
@@ -39,7 +37,7 @@ class CommentDetailViewTests(APITestCase):
         )
         
     #def test_can_retrieve_comment_using_valid_id(self):
-        #response = self.client.get('/comments/1/') 
+        #response = self.client.get('/comments/1') 
         #self.assertEqual(response.data['content'])
 
     #def test_delete_comment_owner(self): 
