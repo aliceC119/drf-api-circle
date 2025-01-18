@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from .validators import validate_youtube_url
 
 
 class Post(models.Model):
@@ -34,4 +35,29 @@ class Post(models.Model):
 
     def __str__(self):
         return f'{self.id} {self.title}'
+
+class VideoPost(models.Model):
+
+    video_filter_choices = [ 
+    ('normal', 'Normal'), ('sepia', 'Sepia'), ('grayscale', 'Grayscale')
+    ]
+    name = models.CharField(max_length=100, blank=True, null=True)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    title = models.CharField(max_length=255)
+    description = models.TextField(blank=True)
+    video_url = models.URLField(max_length=200, blank=True, null=True) # Add this field
+    video_filter = models.CharField( 
+        max_length=32, choices=video_filter_choices, default='normal' )
+    youtube_url = models.URLField( 
+        validators=[validate_youtube_url], blank=True, null=True )
+    comments = models.TextField(blank=True)
+
+    class Meta:
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return f'{self.id} {self.title}'
+
 
