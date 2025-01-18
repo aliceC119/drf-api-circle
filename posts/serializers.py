@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from posts.models import Post, VideoPost
+from posts.models import Post, VideoPost, SharedPost, SharedVideoPost
 from likes.models import Like
 from .validators import validate_youtube_url
 
@@ -103,4 +103,18 @@ class VideoPostSerializer(serializers.ModelSerializer):
             'description', 'video_filter', 'profile_image',
             'is_owner', 'like_id', 'likes_count', 'comments_count',
             'profile_id','youtube_url','name'
+        ]
+
+class SharedPostSerializer(serializers.ModelSerializer): 
+    class Meta:
+         model = SharedPost 
+         fields = [
+            'original_post', 'shared_by', 'created_at'
+        ]
+
+class SharedVideoPostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SharedVideoPost
+        fields = [
+            'original_post', 'shared_by', 'created_at', 'updated_at', 'content'
         ]
