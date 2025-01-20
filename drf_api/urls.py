@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from .views import root_route, logout_route
-from posts.views import PostList, PostDetail, VideoPost, VideoPostDetail, SharedVideoPostList, SharedVideoPostDetail
+from posts.views import PostList, PostDetail, VideoPostList, VideoPostDetail, SharedPostList, SharedPostDetail, SharedVideoPostList, SharedVideoPostDetail
 
 urlpatterns = [
     path('', root_route),
@@ -31,8 +31,10 @@ urlpatterns = [
     ),
     path('api/posts/', PostList.as_view(), name='post-list'), 
     path('api/posts/<int:pk>/', PostDetail.as_view(), name='post-detail'),
-    path('api/videoposts/', PostList.as_view(), name='videopost-list'), 
+    path('api/videoposts/', VideoPostList.as_view(), name='videopost-list'), 
     path('api/videoposts/<int:pk>/', VideoPostDetail.as_view(), name='videopost-detail'),
+    path('api/shared-posts/', SharedPostList.as_view(), name='sharedpost-list'), 
+    path('api/shared-posts/<int:pk>/', SharedPostDetail.as_view(), name='sharedpost-detail'),
     path('api/shared-videoposts/', SharedVideoPostList.as_view(), name='sharedvideopost-list'), 
     path('api/shared-videoposts/<int:pk>/', SharedVideoPostDetail.as_view(), name='sharedvideopost-detail'),
     path('', include('profiles.urls')),
