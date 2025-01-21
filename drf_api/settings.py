@@ -77,9 +77,9 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [
-    '8000-alicec119-drfapicircle-rm013xa1myx.ws.codeinstitute-ide.net'
-#   os.environ.get('ALLOWED_HOST'),
-#   'localhost',
+#    '8000-alicec119-drfapicircle-rm013xa1myx.ws.codeinstitute-ide.net'
+   os.environ.get('ALLOWED_HOST'),
+   'localhost',
 ]
 
 
