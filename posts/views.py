@@ -85,6 +85,7 @@ class VideoPostList(generics.ListCreateAPIView):
     ]
 
     def perform_create(self, serializer):
+        user = self.request.user 
         serializer.save(owner=self.request.user)
 
 
