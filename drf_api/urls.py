@@ -33,10 +33,7 @@ urlpatterns = [
     path('api/posts/<int:pk>/', PostDetail.as_view(), name='post-detail'),
     path('api/videoposts/', VideoPostList.as_view(), name='videopost-list'), 
     path('api/videoposts/<int:pk>/', VideoPostDetail.as_view(), name='videopost-detail'),
-    path('api/shared-posts/', SharedPostList.as_view(), name='sharedpost-list'), 
-    path('api/shared-posts/<int:pk>/', SharedPostDetail.as_view(), name='sharedpost-detail'),
-    path('api/shared-videoposts/', SharedVideoPostList.as_view(), name='sharedvideopost-list'), 
-    path('api/shared-videoposts/<int:pk>/', SharedVideoPostDetail.as_view(), name='sharedvideopost-detail'),
+    
     path('', include('profiles.urls')),
     path('', include('posts.urls')),
     path('', include('comments.urls')),

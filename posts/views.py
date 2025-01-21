@@ -2,8 +2,8 @@ from django.db.models import Count
 from rest_framework import generics, permissions, filters
 from django_filters.rest_framework import DjangoFilterBackend
 from drf_api.permissions import IsOwnerOrReadOnly
-from .models import Post, VideoPost, SharedPost, SharedVideoPost
-from .serializers import PostSerializer, VideoPostSerializer, SharedPostSerializer, SharedVideoPostSerializer
+from .models import Post, VideoPost
+from .serializers import PostSerializer, VideoPostSerializer
 
 
 class PostList(generics.ListCreateAPIView):
@@ -84,10 +84,9 @@ class VideoPostList(generics.ListCreateAPIView):
         'likes__created_at',
     ]
 
-    def perform_create(self, serializer): 
-        
-        user = self.request.user 
+    def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
+
 
 class VideoPostDetail(generics.RetrieveUpdateDestroyAPIView):
     """
@@ -99,35 +98,3 @@ class VideoPostDetail(generics.RetrieveUpdateDestroyAPIView):
         likes_count=Count('likes', distinct=True),
         comments_count=Count('comments', distinct=True)
     ).order_by('-created_at')
-
-class SharedPostList(generics.ListCreateAPIView): 
-    
-    serializer_class = SharedPostSerializer
-    queryset = SharedPost.objects.all()
-    
-class SharedPostDetail(generics.RetrieveUpdateDestroyAPIView):
-    """
-    Retrieve a shared post and edit or delete it if you own it.
-    """
-    serializer_class = SharedPostSerializer
-    permission_classes = [IsOwnerOrReadOnly]
-    queryset = SharedPost.objects.all()
-
-class SharedVideoPostList(generics.ListCreateAPIView):
-    """
-    List shared video posts or create a shared video post if logged in.
-    """
-    serializer_class = SharedVideoPostSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    queryset = SharedVideoPost.objects.all().order_by('-created_at')
-
-    def perform_create(self, serializer):
-        serializer.save(shared_by=self.request.user)
-
-class SharedVideoPostDetail(generics.RetrieveDestroyAPIView):
-    """
-    Retrieve or delete a shared video post if you own it.
-    """
-    serializer_class = SharedVideoPostSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    queryset = SharedVideoPost.objects.all()

@@ -33,6 +33,9 @@ class Post(models.Model):
     class Meta:
         ordering = ['-created_at']
 
+    def get_absolute_url(self): 
+        return reverse('post-detail', kwargs={'pk': self.pk})
+
     def __str__(self):
         return f'{self.id} {self.title}'
 
@@ -47,7 +50,6 @@ class VideoPost(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     title = models.CharField(max_length=255)
     description = models.TextField(blank=True)
-    video_url = models.URLField(max_length=200, blank=True, null=True) # Add this field
     video_filter = models.CharField( 
         max_length=32, choices=video_filter_choices, default='normal' )
     youtube_url = models.URLField( 
@@ -57,45 +59,12 @@ class VideoPost(models.Model):
     class Meta:
         ordering = ['-created_at']
 
+    def get_absolute_url(self): 
+        return reverse('video-detail', kwargs={'pk': self.pk})
+
     def __str__(self):
         return f'{self.id} {self.title}'
 
 
-class SharedPost(models.Model):
 
-    image_filter_choices = [
-    ('_1977', '1977'), ('brannan', 'Brannan'),
-    ('earlybird', 'Earlybird'), ('hudson', 'Hudson'),
-    ('inkwell', 'Inkwell'), ('lofi', 'Lo-Fi'),
-    ('kelvin', 'Kelvin'), ('normal', 'Normal'),
-    ('nashville', 'Nashville'), ('rise', 'Rise'),
-    ('toaster', 'Toaster'), ('valencia', 'Valencia'),
-    ('walden', 'Walden'), ('xpro2', 'X-pro II')
-]
-    owner = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
-    original_post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='shared_posts')
-    shared_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='shared_posts_by')
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    content = models.TextField(blank=True)
-    image = models.ImageField(
-        upload_to='images/', default='../default_post_mgvuq6', blank=True
-    )
-    image_filter = models.CharField(
-        max_length=32, choices=image_filter_choices, default='normal'
-    )
-
-    def __str__(self): return f"{self.shared_by.username} shared: {self.original_post.content[:50]}"
-
-
-class SharedVideoPost(models.Model):
-    original_post = models.ForeignKey(VideoPost, 
-        on_delete=models.CASCADE, related_name='shared_video_posts')
-    shared_by = models.ForeignKey(User, on_delete=models.CASCADE, 
-        related_name='shared_video_posts_by')
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    content = models.TextField(blank=True)
-
-    def __str__(self): return f"{self.shared_by.username} shared: {self.original_post.title}"
 

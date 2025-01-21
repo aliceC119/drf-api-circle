@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from likes.models import Like
+from likes.models import Like, PostLike
 
 
 class LikeSerializer(serializers.ModelSerializer):
@@ -11,8 +11,25 @@ class LikeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Like
-        fields = ['id', 'created_at', 'owner', 'post', 'video_post',
-        'shared_post', 'shared_video_post']
+        fields = ['id', 'created_at', 'owner', 'post']
+
+    def create(self, validated_data):
+        try:
+            return super().create(validated_data)
+        except IntegrityError:
+            raise serializers.ValidationError({
+                'detail': 'possible duplicate'
+            })
+class PostLikeSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the Like model
+    The create method handles the unique constraint on 'owner' and 'videopost'
+    """
+    owner = serializers.ReadOnlyField(source='owner.username')
+
+    class Meta:
+        model = Like
+        fields = ['id', 'created_at', 'owner', 'videopost']
 
     def create(self, validated_data):
         try:
