@@ -28,7 +28,7 @@ class VideoPostLikeSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
 
     class Meta:
-        model = Like
+        model = VideoPostLike
         fields = ['id', 'created_at', 'owner', 'videopost']
 
     def create(self, validated_data):
