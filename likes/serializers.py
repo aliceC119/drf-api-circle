@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from likes.models import Like, PostLike
+from likes.models import Like, VideoPostLike
 
 
 class LikeSerializer(serializers.ModelSerializer):
@@ -20,7 +20,7 @@ class LikeSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError({
                 'detail': 'possible duplicate'
             })
-class PostLikeSerializer(serializers.ModelSerializer):
+class VideoPostLikeSerializer(serializers.ModelSerializer):
     """
     Serializer for the Like model
     The create method handles the unique constraint on 'owner' and 'videopost'
