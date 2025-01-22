@@ -29,7 +29,7 @@ class VideoPostLikeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = VideoPostLike
-        fields = ['id', 'created_at', 'owner', 'videopost']
+        fields = ['id', 'created_at', 'owner', 'video_post']
 
     def create(self, validated_data):
         try:
