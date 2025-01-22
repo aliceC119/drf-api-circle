@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from likes.models import Like, VideoPostLike
+from likes.models import Like
 
 
 class LikeSerializer(serializers.ModelSerializer):
@@ -11,7 +11,7 @@ class LikeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Like
-        fields = ['id', 'created_at', 'owner', 'post']
+        fields = ['id', 'created_at', 'owner', 'post', 'video_post']
 
     def create(self, validated_data):
         try:
@@ -20,21 +20,21 @@ class LikeSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError({
                 'detail': 'possible duplicate'
             })
-class VideoPostLikeSerializer(serializers.ModelSerializer):
-    """
-    Serializer for the Like model
-    The create method handles the unique constraint on 'owner' and 'videopost'
-    """
-    owner = serializers.ReadOnlyField(source='owner.username')
+#class VideoPostLikeSerializer(serializers.ModelSerializer):
+#   """
+#   Serializer for the Like model
+#   The create method handles the unique constraint on 'owner' and 'videopost'
+#   """
+#   owner = serializers.ReadOnlyField(source='owner.username')
 
-    class Meta:
-        model = VideoPostLike
-        fields = ['id', 'created_at', 'owner', 'video_post']
+#   class Meta:
+#       model = VideoPostLike
+#       fields = ['id', 'created_at', 'owner', 'video_post']
 
-    def create(self, validated_data):
-        try:
-            return super().create(validated_data)
-        except IntegrityError:
-            raise serializers.ValidationError({
-                'detail': 'possible duplicate'
-            })
+#   def create(self, validated_data):
+#       try:
+#           return super().create(validated_data)
+#       except IntegrityError:
+#           raise serializers.ValidationError({
+#               'detail': 'possible duplicate'
+#           })
