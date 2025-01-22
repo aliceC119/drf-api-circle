@@ -14,7 +14,7 @@ class CommentList(generics.ListCreateAPIView):
     queryset = Comment.objects.all()
 
     filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['post']
+    filterset_fields = ['post', 'video_post']
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
