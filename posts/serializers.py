@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from posts.models import Post, VideoPost
-from likes.models import Like
+from likes.models import Like, VideoPostLike
 from .validators import validate_youtube_url
 
 
@@ -92,7 +92,7 @@ class VideoPostSerializer(serializers.ModelSerializer):
     def get_like_id(self, obj): 
         user = self.context['request'].user 
         if user.is_authenticated: 
-            like = Like.objects.filter(owner=user, video_post=obj).first() 
+            like = VideoPostLike.objects.filter(owner=user, video_post=obj).first() 
             return like.id if like else None 
         return None
     
@@ -104,4 +104,3 @@ class VideoPostSerializer(serializers.ModelSerializer):
             'is_owner', 'like_id', 'likes_count', 'comments_count',
             'profile_id','youtube_url','name'
         ]
-
