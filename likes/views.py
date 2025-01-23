@@ -26,7 +26,7 @@ class LikePostDetail(generics.RetrieveDestroyAPIView):
     serializer_class = LikeSerializer
     queryset = Like.objects.all()
 
-class LikeVideoPost(generics.CreateAPIView):
+class LikeVideoPost(generics.ListCreateAPIView):
     """
     Like a video post if logged in.
     """
