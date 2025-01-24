@@ -78,9 +78,9 @@ DEBUG = 'DEBUG' in os.environ
 #'DEV' in os.environ
 
 
-ALLOWED_HOSTS = [ 
-  os.environ.get('ALLOWED_HOST'),
-  'localhost',
+ALLOWED_HOSTS = [ '8000-alicec119-drfapicircle-rm013xa1myx.ws.codeinstitute-ide.net'
+#  os.environ.get('ALLOWED_HOST'),
+#  'localhost',
 ]
 
 
@@ -156,8 +156,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'drf_api.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+#Database
+#https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 if 'DEV' in os.environ:
     DATABASES = {
@@ -170,7 +170,23 @@ else:
     DATABASES = {
          'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
     }
+    print('DATABASES: ', DATABASES)
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': os.environ.get('DATABASE_NAME'),
+#        'USER': os.environ.get('DATABASE_USER'),
+#        'PASSWORD': os.environ.get('DATABASE_PASSWORD'),
+#        'HOST': os.environ.get('DATABASE_HOST'),
+#        'PORT': '5432',
+#        'OPTIONS': {
+#            'sslmode': 'require',
+#            'options': '-c search_path=public',
+#            'options': os.environ.get('DATABASE_ENDPOINT'),
+#        },
+#    }
+#}
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeinstitute-ide.net/",
     "https://*.herokuapp.com"
