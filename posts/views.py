@@ -85,11 +85,9 @@ class VideoPostList(generics.ListCreateAPIView):
     ]
 
     def perform_create(self, serializer):
-        user = self.request.user 
-        print("Performing create with user:", user)
+        
         serializer.save(owner=self.request.user)
-        print("Video post created:", serializer.data)
-
+       
 
 class VideoPostDetail(generics.RetrieveUpdateDestroyAPIView):
     """
