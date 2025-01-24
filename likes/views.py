@@ -13,8 +13,7 @@ class LikePost(generics.ListCreateAPIView):
     queryset = Like.objects.all()
 
     def perform_create(self, serializer):
-        post_id = self.kwargs['pk']
-        post = Post.objects.get(pk=post_id)
+    
         serializer.save(owner=self.request.user)
 
 
@@ -35,8 +34,7 @@ class LikeVideoPost(generics.ListCreateAPIView):
     queryset = Like.objects.all()
 
     def perform_create(self, serializer):
-        video_post_id = self.kwargs['pk']
-        video_post = VideoPost.objects.get(pk=video_post_id)
+   
         serializer.save(owner=self.request.user, video_post=video_post)
 
 class LikeVideoPostDetail(generics.RetrieveDestroyAPIView):
