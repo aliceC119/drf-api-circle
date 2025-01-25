@@ -136,7 +136,12 @@ dictionary, populated with all the data specified in the URL.
 + [sqlparse](https://pypi.org/project/sqlparse/) :a non-validating SQL parser for Python.
 
 
-
+### Tools:
++ [GitHub](https://github.com/)
++ [CI Gitpod](https://codeinstitute-ide.net/workspaces)
++ [Heroku](https://www.heroku.com/)
++ [Cloudinary](https://cloudinary.com/)
++ [Canva](https://www.canva.com/en_gb/)
 
 
 
