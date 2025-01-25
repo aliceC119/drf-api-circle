@@ -109,7 +109,31 @@ The endpoints provided by the API are as below:
 | /followers/<int:pk>/ | GET | Read|
 |  | DELETE | Delete |
 
+## Technologies Used 
+### Language:
++ Python
+  
+### Frameworks:
++ [Django Rest Framework](https://www.django-rest-framework.org/)
++ [Django](https://www.djangoproject.com/)
 
+### Libraries
++ os: An Operating System is a System software that manages all the resources of the computing deice.
++ [Gunicon](https://gunicorn.org/):  The Gunicorn "Green Unicorn" (pronounced jee-unicorn or gun-i-corn)[2] is a Python Web Server Gateway Interface (WSGI) HTTP server.
++ [Pycopg 2](https://pypi.org/project/psycopg2/): Psycopg is the most popular PostgreSQL database adapter for the Python programming language.
++ [dj_database_url](https://pypi.org/project/dj-database-url/): A method returns a Django database connection
+dictionary, populated with all the data specified in the URL.
++ [asgiref 3](https://pypi.org/project/asgiref/): a standard for Python asynchronous web apps and servers to communicate with each other.
++ [django-cloudinary-storage](https://pypi.org/project/django-cloudinary-storage/#:~:text=Django%20Cloudinary%20Storage%20is%20a,both%20media%20and%20static%20files.): a Django package that facilitates integration with Cloudinary by implementing Django Storage API.
++ [django-cors-headers](https://pypi.org/project/django-cors-headers/#:~:text=django%2Dcors%2Dheaders%20is%20a,Origin%20Resource%20Sharing%20(CORS).) :a Django application for handling the server headers required for Cross-Origin Resource Sharing (CORS).
++ [django-filter](https://django-filter.readthedocs.io/en/stable/): The filter() method is used to filter search.
++ [oauthlib](https://pypi.org/project/oauthlib/#:~:text=OAuthLib%20is%20a%20framework%20which,onto%20your%20favourite%20web%20framework.): a framework which implements the logic of OAuth1 or OAuth2 without assuming a specific HTTP request object or web framework.
++ [pillow](https://pypi.org/project/pillow/): for image processing.
++ [PyJWT](https://pypi.org/project/PyJWT/): allows you to encode and decode JSON Web Tokens (JWT).
++ [python3-openid](https://pypi.org/project/python3-openid/#:~:text=This%20is%20a%20set%20of,consumer%20package.): support the use of the OpenID decentralized identity system in your application, update to Python 3. Want to enable single sign-on for your web site? Use the openid.consumer package.
++ [pytz](https://pypi.org/project/pytz/) : a functionality that allows you to work with time zones in a Python application.
++ [requests-oauthlib](https://pypi.org/project/requests-oauthlib/) : provide an easy-to-use Python interface for building OAuth1 and OAuth2 clients.
++ [sqlparse](https://pypi.org/project/sqlparse/) :a non-validating SQL parser for Python.
 
 
 
