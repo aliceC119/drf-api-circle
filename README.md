@@ -24,7 +24,22 @@ followers: Allows users to follow and track the activities of other users.
 
 
 ------
-### Table of Contents
+## Table of Contents
+
++ [User Experience](https://github.com/aliceC119/drf-api-circle/blob/main/README.md#user-experience)
++ [User stories](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#user-stories)
++ [Structure](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#structure)
++ [Database](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#database)
++ [API Endpoint](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#api-endpoints)
++ [Technologies Used](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#technologies-used)
+    - [Language](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#language)
+    - [Frameworks](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#frameworks)
+    - [Libraries](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#libraries)
+    - [Tools](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#tools)
++ [Deployment](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#deployment)
+    - [Heroku](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#deployment)
+    - [Cloudinary](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#cloudinary)
++ [Credits](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#credits)
 
 ## User Experience 
 
@@ -143,7 +158,7 @@ dictionary, populated with all the data specified in the URL.
 + [Cloudinary](https://cloudinary.com/)
 + [Canva](https://www.canva.com/en_gb/)
 
-------
+
 
 ## Deployment 
 
@@ -227,6 +242,7 @@ Go back to the workspace and add CLOUDINARY_URL into os.
 
 <img width="586" alt="Screenshot 2025-01-25 at 20 57 38" src="https://github.com/user-attachments/assets/6ebf4b7f-9a9f-4085-b238-8125fddf1d3b" />
 
+------
 ## Credits 
 
 
