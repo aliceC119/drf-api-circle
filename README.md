@@ -51,6 +51,78 @@ The database schema was created using [dbdiagramm](https://dbdiagram.io/home)
 
 ![dbdiagram(api)](https://github.com/user-attachments/assets/2604f041-40c8-4b1b-b094-d90367c53589)
 
+## Database
+
+A PostgresSQL provided by Code Institute was used for this project.
+
++ FieldTypes:
+    - AutoField: An integer field that automatically increments.
+    - CharField: A text field to store large text.
+    - DateTimeField: A field to store data.
+    - ForeignKey: A field to link data in one table to the data in another table, it is a many-to-one relationship.
+    - TextField: A field to store text entries.
+    - URL: A CharField for URL.
+    - Image: A FileDield with uploads restricted to image formats only.
+    - OneToOneField: A Field for a one-to-one relationship.
+  
+## API Endpoints
+
+The endpoints provided by the API are as below:
+
+| Endpoint | HTTP Method | CRUD Operation |
+| -------- | ----------- | -------------- |
+| /dj-rest-auth/registration/ | POST | N/A |
+| /dj-rest-auth/login/ | POST | N/A |
+| /dj-rest-auth/logout/ | POST | N/A |
+| /profiles/ | GET | Read|
+| /profiles/<int:pk>/ | GET | Read|
+|  | PUT | Update |
+| /posts/ | GET | Read|
+|  | POST | Create|
+| /posts/<int:pk>/ | GET | Read|
+|  | PUT | Update |
+|  | DELETE | Delete |
+| /video-posts/ | GET | Read|
+| /video-posts/<int:pk>/| GET | Read|
+|  | PUT | Update |
+|  | DELETE | Delete |
+| /comments/posts/ | GET | Read|
+|  | POST | Create|
+| /comments/posts/<int:pk>/ | GET | Read|
+|  | PUT | Update |
+|  | DELETE | Delete |
+| /comments/video-posts/ | GET | Read|
+|  | POST | Create|
+| /comments/video-posts/<int:pk>/ | GET | Read|
+|  | PUT | Update |
+|  | DELETE | Delete |
+| /likes/posts/ | GET | Read|
+|  | POST | Create|
+| /likes/posts/<int:pk>/ | GET | Read|
+|  | DELETE | Delete |
+| /likes/videoposts/ | GET | Read|
+|  | POST | Create|
+| /likes/videoposts/<int:pk>/ | GET | Read|
+|  | DELETE | Delete |
+| /followers/ | GET | Read|
+|  | POST | Create|
+| /followers/<int:pk>/ | GET | Read|
+|  | DELETE | Delete |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ------
