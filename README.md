@@ -50,14 +50,15 @@ I planned this project using an Agile methodology. The implementation was carrie
 
 | Id | User Story | Implemented |
 | -- | ---------- | ----------- |
-| 1  | As a developer I can set up the base setting for the api backend so that I can build up the features for this project | Done |
-| 2  | As a superuser I can create an account in the backend so that I can manage all activities in the backend environment| Done |
-| 3  | As a superuser I can update my profile with the info of name, profile picture so that my account can be personalized| Done |
-| 4  | As a developer I will create an App 'profiles' so that the superuser can update their info in the profile page | Done |
-| 5  | As a developer I will create and App 'posts so that the superuser can create a post with pictures and YouTube videos, and check the posts list and video post list| Done |
-| 6  | As a developer I will create and App 'likes' so that the superuser can like a post or a video post, and check the list of the liked posts and video posts | Done |
-| 7  | As a developer I will create an App 'comments' so that the superuser can comment on a post or a video post, and to check the comment list. | Done |
-| 8  | As a developer I will create an App 'followers' so that the superuser can follow other users, and to check the list of followers| Done |
+| [#1](https://github.com/users/aliceC119/projects/6?pane=issue&itemId=95176935&issue=aliceC119%7Cdrf-api-circle%7C1)  | As a developer I can set up the base setting for the api backend so that I can build up the features for this project | Done |
+| [#2](https://github.com/users/aliceC119/projects/6?pane=issue&itemId=95177140&issue=aliceC119%7Cdrf-api-circle%7C2)  | As a superuser I can create an account in the backend so that I can manage all activities in the backend environment| Done |
+| [#3](https://github.com/users/aliceC119/projects/6?pane=issue&itemId=95177458&issue=aliceC119%7Cdrf-api-circle%7C3)  | As a superuser I can update my profile with the info of name, profile picture so that my account can be personalized| Done |
+| [#4](https://github.com/users/aliceC119/projects/6?pane=issue&itemId=95177691&issue=aliceC119%7Cdrf-api-circle%7C4)  | As a developer I will create an App 'profiles' so that the superuser can update their info in the profile page | Done |
+| [#5](https://github.com/users/aliceC119/projects/6?pane=issue&itemId=95177867&issue=aliceC119%7Cdrf-api-circle%7C5)  | As a developer I will create and App 'posts so that the superuser can create a post with pictures and YouTube videos, and check the posts list and video post list| Done |
+| [#6](https://github.com/users/aliceC119/projects/6?pane=issue&itemId=95177918&issue=aliceC119%7Cdrf-api-circle%7C6)  | As a developer I will create and App 'likes' so that the superuser can like a post or a video post, and check the list of the liked posts and video posts | Done |
+| [#7](https://github.com/users/aliceC119/projects/6?pane=issue&itemId=95177971&issue=aliceC119%7Cdrf-api-circle%7C7)  | As a developer I will create an App 'comments' so that the superuser can comment on a post or a video post, and to check the comment list. | Done |
+| [#8](https://github.com/users/aliceC119/projects/6?pane=issue&itemId=95177999&issue=aliceC119%7Cdrf-api-circle%7C8)  | As a developer I will create an App 'followers' so that the superuser can follow other users, and to check the list of followers| Done |
+| [#9](https://github.com/users/aliceC119/projects/6?pane=issue&itemId=95178558&issue=aliceC119%7Cdrf-api-circle%7C9)  | As a developer I will create a copy link function for posts and video posts so that the user at the Frontend can copy the link of the posts or the video posts and share them to other social platform.| Done |
 
 
 
