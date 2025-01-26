@@ -160,7 +160,8 @@ dictionary, populated with all the data specified in the URL.
 + [Cloudinary](https://cloudinary.com/)
 + [Canva](https://www.canva.com/en_gb/)
 
-
+## Testing 
+### Validation Testing
 
 ## Deployment 
 
