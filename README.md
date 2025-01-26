@@ -165,7 +165,7 @@ dictionary, populated with all the data specified in the URL.
 
 ### Heroku 
 The application is deployed on Heroku via a GitHub connection. To deploy a Heroku project, below are the steps I used.
-In Heroku, this is configured under Config Vars in the Settings tab.
+
 
 ## Step 1: Create an App on Heroku
 
