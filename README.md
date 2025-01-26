@@ -37,6 +37,7 @@ followers: Allows users to follow and track the activities of other users.
     - [Frameworks](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#frameworks)
     - [Libraries](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#libraries)
     - [Tools](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#tools)
++ [Testing](https://github.com/aliceC119/drf-api-circle/blob/main/README.md#testing)
 + [Deployment](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#deployment)
     - [Heroku](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#deployment)
     - [Cloudinary](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#cloudinary)
