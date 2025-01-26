@@ -74,13 +74,14 @@ REST_AUTH_SERIALIZERS = {
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEBUG' in os.environ
-#'DEV' in os.environ
+DEBUG = 'DEV' in os.environ
+
+#'DEBUG' in os.environ#
 
 
-ALLOWED_HOSTS = [ '8000-alicec119-drfapicircle-rm013xa1myx.ws.codeinstitute-ide.net'
-#  os.environ.get('ALLOWED_HOST'),
-#  'localhost',
+ALLOWED_HOSTS = [ 
+  os.environ.get('ALLOWED_HOST'),
+  'localhost',
 ]
 
 
@@ -170,7 +171,7 @@ else:
     DATABASES = {
          'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
     }
-    print('DATABASES: ', DATABASES)
+    
 
 #DATABASES = {
 #    'default': {

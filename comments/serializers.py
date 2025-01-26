@@ -64,7 +64,7 @@ class VideoPostCommentSerializer(serializers.ModelSerializer):
         return naturaltime(obj.updated_at)
 
     class Meta:
-        model = Comment
+        model = VideoPostComment
         fields = [
             'id', 'owner', 'is_owner', 'profile_id', 'profile_image',
             'video_post', 'created_at', 'updated_at', 'content'
