@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from .views import root_route, logout_route
 from posts.views import PostList, PostDetail, VideoPostList, VideoPostDetail
+from likes.views import LikePost, LikePostDetail, VideoPostLikeList, VideoPostLikeDetail
 
 urlpatterns = [
     path('', root_route),
