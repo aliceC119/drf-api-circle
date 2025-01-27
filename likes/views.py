@@ -30,7 +30,7 @@ class LikeVideoPost(generics.ListCreateAPIView):
     Like a video post if logged in.
     """
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    serializer_class = LikeSerializer
+    serializer_class = VideoPostLikeSerializer
     queryset = Like.objects.all()
 
     def perform_create(self, serializer):
@@ -42,7 +42,7 @@ class LikeVideoPostDetail(generics.RetrieveDestroyAPIView):
     Retrieve a like or delete it by id if you own it.
     """
     permission_classes = [IsOwnerOrReadOnly]
-    serializer_class = LikeSerializer
+    serializer_class = VideoPostLikeSerializer
     queryset = Like.objects.all()
 
 
