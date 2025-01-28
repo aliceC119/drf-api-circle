@@ -64,13 +64,11 @@ class VideoPostSerializer(serializers.ModelSerializer):
 
     def validate(self, data): 
        
+        
         youtube_url = data.get('youtube_url', "")
-
-        if isinstance(youtube_url, dict):
+        
+        if not isinstance(youtube_url, str):
             raise serializers.ValidationError("Invalid input type for YouTube URL. Expected string.")
-        if youtube_url and validate_youtube_url(youtube_url):
-            errors = {'youtube_url': 'Invalid YouTube URL format'}
-            raise serializers.ValidationError(errors)
         
         return data
 
