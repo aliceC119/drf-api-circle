@@ -12,6 +12,7 @@ class PostSerializer(serializers.ModelSerializer):
     like_id = serializers.SerializerMethodField()
     likes_count = serializers.ReadOnlyField()
     comments_count = serializers.ReadOnlyField()
+    type = serializers.CharField(read_only=True)
 
     def validate_image(self, value):
         if value.size > 2 * 1024 * 1024:
@@ -46,6 +47,7 @@ class PostSerializer(serializers.ModelSerializer):
             'profile_image', 'created_at', 'updated_at',
             'title', 'content', 'image', 'image_filter',
             'like_id', 'likes_count', 'comments_count',
+            'type',
         ]
 
 class VideoPostSerializer(serializers.ModelSerializer):
@@ -57,6 +59,8 @@ class VideoPostSerializer(serializers.ModelSerializer):
     likes_count = serializers.ReadOnlyField()
     comments_count = serializers.ReadOnlyField()
     youtube_url = serializers.URLField(required=False, validators=[validate_youtube_url])
+    validators=[validate_youtube_url]
+    type = serializers.CharField(read_only=True)
 
     def validate(self, data): 
         video = data.get('video', None) 
@@ -102,5 +106,5 @@ class VideoPostSerializer(serializers.ModelSerializer):
             'id','owner', 'created_at', 'updated_at', 'title',
             'description', 'video_filter', 'profile_image',
             'is_owner', 'like_id', 'likes_count', 'comments_count',
-            'profile_id','youtube_url','name'
+            'profile_id','youtube_url','name', 'type'
         ]

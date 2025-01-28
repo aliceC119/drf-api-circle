@@ -2,6 +2,13 @@ from django.db import models
 from django.contrib.auth.models import User
 from .validators import validate_youtube_url
 
+TYPE_CHOICES = [
+    ('text', 'Text'),
+    ('image', 'Image'),
+    ('video', 'Video'),
+    ('tutorial', 'Tutorial'),
+    ('youtube', 'YouTube')
+]
 
 class Post(models.Model):
     """
@@ -29,6 +36,9 @@ class Post(models.Model):
     image_filter = models.CharField(
         max_length=32, choices=image_filter_choices, default='normal'
     )
+    type = models.CharField(
+        max_length=32, choices=TYPE_CHOICES, default='text'
+    ) 
 
     class Meta:
         ordering = ['-created_at']
@@ -44,6 +54,7 @@ class VideoPost(models.Model):
     video_filter_choices = [ 
     ('normal', 'Normal'), ('sepia', 'Sepia'), ('grayscale', 'Grayscale')
     ]
+    
     name = models.CharField(max_length=100, blank=True, null=True)
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -55,6 +66,10 @@ class VideoPost(models.Model):
     youtube_url = models.URLField( 
         validators=[validate_youtube_url], blank=True, null=True )
     comments = models.TextField(blank=True)
+    type = models.CharField(
+        max_length=32, choices=TYPE_CHOICES, default='video'
+    )
+    
 
     class Meta:
         ordering = ['-created_at']
