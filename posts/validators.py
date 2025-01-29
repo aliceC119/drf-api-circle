@@ -20,6 +20,8 @@ def validate_youtube_url(value):
     if not match:
         raise ValidationError("This is not a valid YouTube URL. Please provide a valid link.")
 
-    # Optional: Extract and return the video ID
+    # Optional: Extract the video ID
     video_id = match.group(5)
-    return video_id  # Return the video ID if needed
+
+    # Return the validated URL instead of just the video ID
+    return value

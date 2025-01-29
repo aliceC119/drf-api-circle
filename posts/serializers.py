@@ -58,8 +58,7 @@ class VideoPostSerializer(serializers.ModelSerializer):
     like_id = serializers.SerializerMethodField()
     likes_count = serializers.ReadOnlyField()
     comments_count = serializers.ReadOnlyField()
-    youtube_url = serializers.URLField(required=False, validators=[validate_youtube_url])
-    validators=[validate_youtube_url]
+    youtube_url = serializers.URLField(validators=[validate_youtube_url])
     type = serializers.CharField(read_only=True)
 
     
