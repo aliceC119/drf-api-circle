@@ -62,15 +62,8 @@ class VideoPostSerializer(serializers.ModelSerializer):
     validators=[validate_youtube_url]
     type = serializers.CharField(read_only=True)
 
-    def validate(self, data): 
-       
-        
-        youtube_url = data.get('youtube_url', "")
-        
-        if not isinstance(youtube_url, str):
-            raise serializers.ValidationError("Invalid input type for YouTube URL. Expected string.")
-        
-        return data
+    
+
 
     def validate_media_file(self, value):
         """
