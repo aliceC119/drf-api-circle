@@ -25,8 +25,7 @@ class VideoPostComment(models.Model):
    Comment model, related to User and Post
     """
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
-    
-    video_post = models.ForeignKey(VideoPost, on_delete=models.CASCADE)
+    video_post = models.ForeignKey(VideoPost, on_delete=models.CASCADE, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     content = models.TextField()
