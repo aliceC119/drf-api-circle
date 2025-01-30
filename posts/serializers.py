@@ -40,6 +40,10 @@ class PostSerializer(serializers.ModelSerializer):
             return like.id if like else None
         return None
 
+    def get_copy_link(self, obj):
+        request = self.context['request']
+        return request.build_absolute_uri(obj.get_absolute_url())
+
     class Meta:
         model = Post
         fields = [
@@ -87,6 +91,10 @@ class VideoPostSerializer(serializers.ModelSerializer):
             like = VideoPostLike.objects.filter(owner=user, video_post=obj).first() 
             return like.id if like else None 
         return None
+    
+    def get_copy_link(self, obj):
+        request = self.context['request']
+        return request.build_absolute_uri(obj.get_absolute_url())
     
     class Meta:
         model = VideoPost

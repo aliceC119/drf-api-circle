@@ -43,8 +43,8 @@ class Post(models.Model):
     class Meta:
         ordering = ['-created_at']
 
-    #def get_absolute_url(self): 
-        #return reverse('post-detail')
+    def get_absolute_url(self): 
+        return reverse('post-detail')
 
     def __str__(self):
         return f'{self.id} {self.title}'
@@ -74,8 +74,8 @@ class VideoPost(models.Model):
     class Meta:
         ordering = ['-created_at']
 
-    #def get_absolute_url(self): 
-        #return reverse('video-detail')
+    def get_absolute_url(self): 
+        return reverse('video-detail')
 
     def __str__(self):
         return f'{self.id} {self.title}'
