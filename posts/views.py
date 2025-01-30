@@ -62,7 +62,7 @@ class VideoPostList(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = VideoPost.objects.annotate(
         likes_count=Count('likes', distinct=True),
-        comments_count=Count('comments', distinct=True)
+        comments_count=Count('videopostcomment', distinct=True)
     ).order_by('-created_at')
     filter_backends = [
         filters.OrderingFilter,
@@ -97,5 +97,5 @@ class VideoPostDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsOwnerOrReadOnly]
     queryset = VideoPost.objects.annotate(
         likes_count=Count('likes', distinct=True),
-        comments_count=Count('videopostcomments', distinct=True)
+        comments_count=Count('videopostcomment', distinct=True)
     ).order_by('-created_at')
