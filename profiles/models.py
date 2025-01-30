@@ -18,6 +18,9 @@ class Profile(models.Model):
 
     def __str__(self):
         return f"{self.owner}'s profile"
+    
+    def video_posts_count(self):
+        return self.owner.videopost_set.count()
 
 
 def create_profile(sender, instance, created, **kwargs):
