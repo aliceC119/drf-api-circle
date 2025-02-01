@@ -166,6 +166,9 @@ dictionary, populated with all the data specified in the URL.
 + [Canva](https://www.canva.com/en_gb/)
 
 ## Testing 
++ Due to time constraints, only a limited number of tests could be performed.
++ Manual tests were conducted frequently.
+  
 ### Validation Testing
 + [CI Python Linter](https://pep8ci.herokuapp.com/#)
 
