@@ -1,5 +1,7 @@
 # The drf-api-circle
 
+<img width="985" alt="Screenshot 2025-02-01 at 13 58 47" src="https://github.com/user-attachments/assets/98b1c226-bd2e-4196-b96a-9a1395a56e52" />
+
 ## Advanced Front-End Portfolia Project(PP5) 
 
 The drf-api-circle is the backend for the Circle application, developed using the Django Rest Framework (DRF). It serves as the foundation for a social network (Circle) dedicated to sharing ideas about life in general.
