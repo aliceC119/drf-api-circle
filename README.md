@@ -44,6 +44,7 @@ followers: Allows users to follow and track the activities of other users.
     - [Heroku](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#deployment)
     - [Cloudinary](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#cloudinary)
 + [Credits](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#credits)
++ [Acknowledgements]
 
 ## User Experience 
 
@@ -248,12 +249,26 @@ Go back to the workspace and add CLOUDINARY_URL into os.
 
 <img width="586" alt="Screenshot 2025-01-25 at 20 57 38" src="https://github.com/user-attachments/assets/6ebf4b7f-9a9f-4085-b238-8125fddf1d3b" />
 
+### Create PostgreSQL using Code Institute Database Maker
++ Student can get Database URL by navigating to[CI Database Makeer](https://dbs.ci-dbs.net/)
+
 ------
 ## Credits 
 
++ The setup and overall design of this project are based on the "Moments" walkthrough project from the Code Institute. The main components—including profiles, posts, likes, comments, and followers—were derived from the walkthrough project. Additionally, new elements such as video posts and copy links have been added to enhance this project.
 
 
+### Website for references
 
++ The following websites were used as a source of knowledge:
+  + [GeeksforGeeks](https://www.geeksforgeeks.org/)
+  + [reddit](https://www.reddit.com/)
+  + [stack Overflow](https://stackoverflow.com/)
+  + [Google](https://www.google.de/)
+  + Slack Community
+
+
+## Acknowledgements
 
 
 
