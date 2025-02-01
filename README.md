@@ -132,10 +132,10 @@ The endpoints provided by the API are as below:
 |  | DELETE | Delete |
 
 ## Technologies Used 
-### Language:
+### Language
 + Python
   
-### Frameworks:
+### Frameworks
 + [Django Rest Framework](https://www.django-rest-framework.org/)
 + [Django](https://www.djangoproject.com/)
 
@@ -158,7 +158,7 @@ dictionary, populated with all the data specified in the URL.
 + [sqlparse](https://pypi.org/project/sqlparse/) :a non-validating SQL parser for Python.
 
 
-### Tools:
+### Tools
 + [GitHub](https://github.com/)
 + [CI Gitpod](https://codeinstitute-ide.net/workspaces)
 + [Heroku](https://www.heroku.com/)
