@@ -1,6 +1,6 @@
 # The drf-api-circle
 
-<img width="985" alt="Screenshot 2025-02-01 at 13 58 47" src="https://github.com/user-attachments/assets/98b1c226-bd2e-4196-b96a-9a1395a56e52" />
+
 
 ## Advanced Front-End Portfolia Project(PP5) 
 
@@ -44,7 +44,8 @@ followers: Allows users to follow and track the activities of other users.
     - [Heroku](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#deployment)
     - [Cloudinary](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#cloudinary)
 + [Credits](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#credits)
-+ [Acknowledgements]
+    - [References](https://github.com/aliceC119/drf-api-circle/blob/main/README.md#credits)
++ [Acknowledgements](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#acknowledgements)
 
 ## User Experience 
 
@@ -258,7 +259,7 @@ Go back to the workspace and add CLOUDINARY_URL into os.
 + The setup and overall design of this project are based on the "Moments" walkthrough project from the Code Institute. The main components—including profiles, posts, likes, comments, and followers—were derived from the walkthrough project. Additionally, new elements such as video posts and copy links have been added to enhance this project.
 
 
-### Website for references
+### References
 
 + The following websites were used as a source of knowledge:
   + [GeeksforGeeks](https://www.geeksforgeeks.org/)
@@ -269,6 +270,7 @@ Go back to the workspace and add CLOUDINARY_URL into os.
 
 
 ## Acknowledgements
+
 
 
 
