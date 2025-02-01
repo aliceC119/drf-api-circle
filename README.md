@@ -70,13 +70,10 @@ I planned this project using an Agile methodology. The implementation was carrie
 ## Structure
 
 The database schema was created using [dbdiagramm](https://dbdiagram.io/home) 
-
 ![dbdiagram(api)](https://github.com/user-attachments/assets/2604f041-40c8-4b1b-b094-d90367c53589)
 
-## Database
-+ Student can get Database URL by navigating to[CI Database Makeer](https://dbs.ci-dbs.net/)
++ Field Types:
 
-+ FieldTypes:
     - AutoField: An integer field that automatically increments.
     - CharField: A text field to store large text.
     - DateTimeField: A field to store data.
@@ -85,6 +82,15 @@ The database schema was created using [dbdiagramm](https://dbdiagram.io/home)
     - URL: A CharField for URL.
     - Image: A FileDield with uploads restricted to image formats only.
     - OneToOneField: A Field for a one-to-one relationship.
+      
+
+
+
+
+## Database
++ Student can get Database URL by navigating to[CI Database Makeer](https://dbs.ci-dbs.net/)
+
+
   
 ## API Endpoints
 
