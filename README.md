@@ -29,22 +29,22 @@ followers: Allows users to follow and track the activities of other users.
 ------
 ## Table of Contents
 
-+ [User Experience](https://github.com/aliceC119/drf-api-circle/blob/main/README.md#user-experience)
-+ [User stories](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#user-stories)
-+ [Structure](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#structure)
-+ [Database](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#database)
-+ [API Endpoint](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#api-endpoints)
-+ [Technologies Used](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#technologies-used)
-    - [Language](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#language)
-    - [Frameworks](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#frameworks)
-    - [Libraries](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#libraries)
-    - [Tools](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#tools)
-+ [Testing](https://github.com/aliceC119/drf-api-circle/blob/main/README.md#testing)
-+ [Deployment](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#deployment)
-    - [Heroku](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#deployment)
-    - [Cloudinary](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#cloudinary)
-+ [Credits](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#credits)
-    - [References](https://github.com/aliceC119/drf-api-circle/blob/main/README.md#credits)
++ [User Experience](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#user-experience)
++ [User stories](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#user-stories)
++ [Structure](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#structure)
++ [Database](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#database)
++ [API Endpoint](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#api-endpoints)
++ [Technologies Used](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#technologies-used)
+    - [Language](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#language)
+    - [Frameworks](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#frameworks)
+    - [Libraries](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#libraries)
+    - [Tools](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#tools)
++ [Testing](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#testing)
++ [Deployment](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#deployment)
+    - [Heroku](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#heroku)
+    - [Cloudinary](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#cloudinary)
++ [Credits](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#credits)
+    - [Code references](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#code-references)
 + [Acknowledgements](https://github.com/aliceC119/drf-api-circle/edit/main/README.md#acknowledgements)
 
 ## User Experience 
@@ -74,8 +74,7 @@ The database schema was created using [dbdiagramm](https://dbdiagram.io/home)
 ![dbdiagram(api)](https://github.com/user-attachments/assets/2604f041-40c8-4b1b-b094-d90367c53589)
 
 ## Database
-
-A PostgresSQL provided by Code Institute was used for this project.
++ Student can get Database URL by navigating to[CI Database Makeer](https://dbs.ci-dbs.net/)
 
 + FieldTypes:
     - AutoField: An integer field that automatically increments.
@@ -260,8 +259,6 @@ Go back to the workspace and add CLOUDINARY_URL into os.
 
 <img width="586" alt="Screenshot 2025-01-25 at 20 57 38" src="https://github.com/user-attachments/assets/6ebf4b7f-9a9f-4085-b238-8125fddf1d3b" />
 
-### Create PostgreSQL using Code Institute Database Maker
-+ Student can get Database URL by navigating to[CI Database Makeer](https://dbs.ci-dbs.net/)
 
 ------
 ## Credits 
