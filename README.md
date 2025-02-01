@@ -167,6 +167,7 @@ dictionary, populated with all the data specified in the URL.
 
 ## Testing 
 ### Validation Testing
++ [CI Python Linter](https://pep8ci.herokuapp.com/#)
 
 ## Deployment 
 
@@ -265,7 +266,7 @@ Go back to the workspace and add CLOUDINARY_URL into os.
 + The setup and overall design of this project are based on the "Moments" walkthrough project from the Code Institute. The main components—including profiles, posts, likes, comments, and followers—were derived from the walkthrough project. Additionally, new elements such as video posts and copy links have been added to enhance this project.
 
 
-### References
+### Code references
 
 + The following websites were used as a source of knowledge:
   + [GeeksforGeeks](https://www.geeksforgeeks.org/)
