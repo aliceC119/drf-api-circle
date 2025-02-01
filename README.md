@@ -210,6 +210,12 @@ The app can be found by clicking the 'Open App' button in the top right corner w
 Go back to the workspace and add the Heroku app URL in this format "https://*.herokuapp.com" in the settings.py into CSRF_TRUSTED_ORIGINS.
 <img width="333" alt="Screenshot 2025-01-25 at 21 03 02" src="https://github.com/user-attachments/assets/16d40ed6-b59d-4ab6-ad86-e09ac16433c9" />
 
+## Step 6:
+A welcome message is displayed when it is successfully deployed.
+
+<img width="534" alt="Screenshot 2025-02-01 at 15 02 18" src="https://github.com/user-attachments/assets/2df79bd9-2f4e-4fc2-9f34-1663b4dbb44f" />
+
+
 ### Cloudinary 
 
 Go to [Cloudinary](https://cloudinary.com/) and sign up to open an account
