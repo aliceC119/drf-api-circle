@@ -173,22 +173,6 @@ else:
          'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
     }
     
-
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.postgresql',
-#        'NAME': os.environ.get('DATABASE_NAME'),
-#        'USER': os.environ.get('DATABASE_USER'),
-#        'PASSWORD': os.environ.get('DATABASE_PASSWORD'),
-#        'HOST': os.environ.get('DATABASE_HOST'),
-#        'PORT': '5432',
-#        'OPTIONS': {
-#            'sslmode': 'require',
-#            'options': '-c search_path=public',
-#            'options': os.environ.get('DATABASE_ENDPOINT'),
-#        },
-#    }
-#}
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeinstitute-ide.net/",
     "https://*.herokuapp.com"
