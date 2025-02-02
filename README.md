@@ -175,7 +175,7 @@ dictionary, populated with all the data specified in the URL.
 + Manual tests were conducted frequently.
   
 ### Validation Testing
-+ [CI Python Linter](https://pep8ci.herokuapp.com/#)
++ Passed all tests using the CI Python Linter. [CI Python Linter](https://pep8ci.herokuapp.com/#)
 
 ## Deployment 
 
