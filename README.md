@@ -290,6 +290,7 @@ Go back to the workspace and add CLOUDINARY_URL into os.
 
 + Many thanks to the tutor support team for helping me with this project, especially Rebecca, Sarah, Oisín, and Roman. Their assistance was invaluable; they supported me every time I got stuck and always tried their best to help me resolve issues. Thank you to my mentor, Gareth, for showing his support.
 
++ This project is for educational use.
 
 
 
