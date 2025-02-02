@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 from posts.models import Post, VideoPost
 
 
-
 class Like(models.Model):
     """
     Like model, related to 'owner' and'post'.
@@ -11,9 +10,10 @@ class Like(models.Model):
     """
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     post = models.ForeignKey(
-        Post, related_name='likes', on_delete=models.CASCADE, null=True, blank=True
+        Post, related_name='likes', on_delete=models.CASCADE,
+        null=True, blank=True
     )
-    
+
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -32,7 +32,8 @@ class VideoPostLike(models.Model):
     """
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     video_post = models.ForeignKey(
-        VideoPost, related_name='likes', on_delete=models.CASCADE, null=True, blank=True
+        VideoPost, related_name='likes', on_delete=models.CASCADE,
+        null=True, blank=True
     )
     created_at = models.DateTimeField(auto_now_add=True)
 
@@ -42,4 +43,3 @@ class VideoPostLike(models.Model):
 
     def __str__(self):
         return f'{self.owner} {self.video_post}'
-

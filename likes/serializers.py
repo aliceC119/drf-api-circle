@@ -20,7 +20,10 @@ class LikeSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError({
                 'detail': 'possible duplicate'
             })
+
+
 class VideoPostLikeSerializer(serializers.ModelSerializer):
+
     """
     Serializer for the VideoPostLike model
     The create method handles the unique constraint on 'owner' and 'videopost'

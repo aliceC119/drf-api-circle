@@ -3,7 +3,6 @@ from .models import Profile
 from followers.models import Follower
 
 
-
 class ProfileSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
@@ -12,7 +11,6 @@ class ProfileSerializer(serializers.ModelSerializer):
     video_posts_count = serializers.ReadOnlyField()
     followers_count = serializers.ReadOnlyField()
     following_count = serializers.ReadOnlyField()
-
 
     def get_is_owner(self, obj):
         request = self.context['request']
@@ -33,6 +31,6 @@ class ProfileSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'owner', 'created_at', 'updated_at', 'name',
             'content', 'image', 'is_owner', 'following_id',
-            'posts_count', 'video_posts_count', 'followers_count', 
+            'posts_count', 'video_posts_count', 'followers_count',
             'following_count',
         ]

@@ -54,6 +54,7 @@ class PostSerializer(serializers.ModelSerializer):
             'type',
         ]
 
+
 class VideoPostSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
@@ -65,9 +66,6 @@ class VideoPostSerializer(serializers.ModelSerializer):
     youtube_url = serializers.URLField(validators=[validate_youtube_url])
     type = serializers.CharField(read_only=True)
 
-    
-
-
     def validate_media_file(self, value):
         """
         Check that the media file is either an image or a video.
@@ -77,30 +75,33 @@ class VideoPostSerializer(serializers.ModelSerializer):
         elif value.content_type.startswith('video'):
             return value
         else:
-            raise serializers.ValidationError("Unsupported file type. Only images and videos are allowed.")
+            raise serializers.ValidationError
+            ("Unsupported file type. Only images and videos are allowed.")
 
-    def get_is_owner(self, obj): 
-        request = self.context.get('request') 
-        if request and request.user: 
-            return obj.owner == request.user 
+    def get_is_owner(self, obj):
+        request = self.context.get('request')
+        if request and request.user:
+            return obj.owner == request.user
         return False
-    
-    def get_like_id(self, obj): 
-        user = self.context['request'].user 
-        if user.is_authenticated: 
-            like = VideoPostLike.objects.filter(owner=user, video_post=obj).first() 
-            return like.id if like else None 
+
+    def get_like_id(self, obj):
+        user = self.context['request'].user
+        if user.is_authenticated:
+            like = VideoPostLike.objects.filter(
+                owner=user, video_post=obj
+                ).first()
+            return like.id if like else None
         return None
-    
+
     def get_copy_link(self, obj):
         request = self.context['request']
         return request.build_absolute_uri(obj.get_absolute_url())
-    
+
     class Meta:
         model = VideoPost
         fields = [
-            'id','owner', 'created_at', 'updated_at', 'title',
+            'id', 'owner', 'created_at', 'updated_at', 'title',
             'description', 'video_filter', 'profile_image',
             'is_owner', 'like_id', 'likes_count', 'comments_count',
-            'profile_id','youtube_url','name', 'type'
+            'profile_id', 'youtube_url', 'name', 'type'
         ]
