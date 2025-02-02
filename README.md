@@ -13,7 +13,7 @@ This API is built to integrate smoothly with a React frontend, ensuring a seamle
 
 + The deployed API is available [here](https://drf-api-circle-320cd30d1665.herokuapp.com/)
 + The deployed React project is accessible [here](https://circle-ppt5-a39096a720ce.herokuapp.com/)
-+ The GitHub repository for the associated front end can be found [here](https://github.com/aliceC119/circle)
++ The GitHub repository for the associated Frontend can be found [here](https://github.com/aliceC119/circle)
 
 ## Key Apps
 
