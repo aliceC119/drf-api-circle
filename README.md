@@ -93,7 +93,24 @@ The database schema was created using [dbdiagramm](https://dbdiagram.io/home)
 ## Database
 + Student can get Database URL by navigating to[CI Database Makeer](https://dbs.ci-dbs.net/)
 
+## Models
 
+Each model has a unique purpose and collectively supports a variety of application features that enhance the user experience, from user registration to content creation that serves the purpose of social networking.
+
+### Comments:
+This model represents comments on posts and video posts made by users. It is linked to the contrib.auth.model (the user) and the Post model.  In addition to the content of the comment, it keeps track of the times when each comment was created and last updated.
+
+### Followers:
+This model maintains the follower-following relationships between users. Each following event is also updated and stored.
+
+### Likes:
+This model captures the likes that users give to a post or a video post. It is linked to the contrib.auth and post models. It also records the time when each Like event was created.
+
+### Posts:
+This model represents the posts and videos created by users. It is related to the contrib.auth model as the owner of the post and video post. It keeps track of the times when each post and video post was created and last updated, as well as the content of the post and video post, including the title, image, YouTube URL, and description.
+
+### Profiles:
+This model is related to the contrib.auth model with the information of the users, such as their name and profile image, and it also keeps track of when each user profile was created and last updated. 
   
 ## API Endpoints
 
