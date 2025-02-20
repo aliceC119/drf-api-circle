@@ -144,9 +144,9 @@ The endpoints provided by the API are as below:
 | /comments/posts/<int:pk>/ | GET | Read|
 |  | PUT | Update |
 |  | DELETE | Delete |
-| /comments/video-posts/ | GET | Read|
+| /comments/videoposts/ | GET | Read|
 |  | POST | Create|
-| /comments/video-posts/<int:pk>/ | GET | Read|
+| /comments/videoposts/<int:pk>/ | GET | Read|
 |  | PUT | Update |
 |  | DELETE | Delete |
 | /likes/posts/ | GET | Read|
