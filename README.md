@@ -49,6 +49,8 @@ followers: Allows users to follow and track the activities of other users.
     - [Libraries](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#libraries)
     - [Tools](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#tools)
 + [Testing](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#testing)
+    - [Manual Test](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#manual-test)
+    - 
 + [Deployment](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#deployment)
     - [Heroku](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#heroku)
     - [Cloudinary](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#cloudinary)
