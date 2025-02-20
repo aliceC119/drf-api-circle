@@ -50,7 +50,7 @@ followers: Allows users to follow and track the activities of other users.
     - [Tools](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#tools)
 + [Testing](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#testing)
     - [Manual Test](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#manual-test)
-    - 
+      
 + [Deployment](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#deployment)
     - [Heroku](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#heroku)
     - [Cloudinary](https://github.com/aliceC119/drf-api-circle?tab=readme-ov-file#cloudinary)
@@ -215,10 +215,8 @@ dictionary, populated with all the data specified in the URL.
 | Tested | Expected result | Result |
 | -------- | ----------- | -------------- |
 | Root URL | Show welcome message | Works as expected | 
-| /profiles/ | Display profile lists | Works as expected | 
-| /profiles/int:pk/ | Display profile detail| Works as expected | 
-| /posts/| Display posts list| Works as expected | 
-| /posts/int:pk/| Display posts detail| Works as expected | 
+| /posts/ | Display posts list| Works as expected | 
+| /posts/int:pk/ | Display posts detail| Works as expected | 
 | /video-posts/| Display video list| Works as expected |
 | /video-posts/int:pk/| Display video post detail| Works as expected | 
 | /comments/posts/| Display comment list for post| Works as expected | 
@@ -231,6 +229,18 @@ dictionary, populated with all the data specified in the URL.
 | /likes/videoposts/int:pk/| Display likes detail for video post| Works as expected |
 | /followers/| Display followers list| Works as expected |
 | /followers/int:pk/| Display followers detail| Works as expected |
+| /profiles/ | Display profile lists | Works as expected | 
+| /profiles/int:pk/ | Display profile detail| Works as expected | 
+
+**CRUD functionality**
+
+| Tested | Create | View | Update | Delete |
+| -------- | ----------- | -------------- | -------------- |  -------------- |
+| Posts |  :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:  | :heavy_check_mark:  |
+| Comments |  :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:  | :heavy_check_mark:  |
+| Likes |  :heavy_check_mark: | :heavy_check_mark: | - |:heavy_check_mark:  |
+| Followers |  :heavy_check_mark: | :heavy_check_mark: | - |:heavy_check_mark:  |
+| Profiles |  :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:  | :heavy_check_mark:  |
 
 
 
