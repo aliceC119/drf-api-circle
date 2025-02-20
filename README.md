@@ -206,7 +206,7 @@ dictionary, populated with all the data specified in the URL.
   
   <img width="1214" alt="pep8" src="https://github.com/user-attachments/assets/33ff1f54-9472-463b-a661-40fa41a8fc06" />
 
-+ Due to time constraints, only a limited number of tests could be performed.
++ Due to time constraints, only a limited number of automated tests could be performed.
   
 ### Manual Test
 
