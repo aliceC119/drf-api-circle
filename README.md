@@ -197,14 +197,40 @@ dictionary, populated with all the data specified in the URL.
 + [Canva](https://www.canva.com/en_gb/)
 
 ## Testing 
-+ Due to time constraints, only a limited number of tests could be performed.
-+ Manual tests were conducted frequently.
   
 ### Validation Testing
 + Mostly all tests using the CI Python Linter. [CI Python Linter](https://pep8ci.herokuapp.com/#)
 + There are unresolved E501 'line too long' issues in the `settings.py` file."
   
   <img width="1214" alt="pep8" src="https://github.com/user-attachments/assets/33ff1f54-9472-463b-a661-40fa41a8fc06" />
+
++ Due to time constraints, only a limited number of tests could be performed.
+  
+### Manual Test
+
+**URL Testing**
+
+| Tested | Expected result | Result |
+| -------- | ----------- | -------------- |
+| Root URL | Show welcome message | Works as expected | 
+| /profiles/ | Display profile lists | Works as expected | 
+| /profiles/int:pk/ | Display profile detail| Works as expected | 
+| /posts/| Display posts list| Works as expected | 
+| /posts/int:pk/| Display posts detail| Works as expected | 
+| /video-posts/| Display video list| Works as expected |
+| /video-posts/int:pk/| Display video post detail| Works as expected | 
+| /comments/posts/| Display comment list for post| Works as expected | 
+| /comments/posts/int:pk/| Display comment detail for post| Works as expected | 
+| /comments/videoposts/| Display comment list for video post | Works as expected | 
+| /comments/videoposts/int:pk/| Display comment detail for video post| Works as expected | 
+| /likes/posts/| Display likes list for post| Works as expected |
+| /likes/posts/int:pk/| Display likes detail for post| Works as expected |
+| /likes/videoposts/| Display likes list for video post| Works as expected |
+| /likes/videoposts/int:pk/| Display likes detail for video post| Works as expected |
+| /followers/| Display followers list| Works as expected |
+| /followers/int:pk/| Display followers detail| Works as expected |
+
+
 
 
 ## Deployment 
