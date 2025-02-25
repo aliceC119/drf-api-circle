@@ -40,21 +40,8 @@ REST_FRAMEWORK = {
     'DATETIME_FORMAT': '%d %b %Y',
 }
 
-
-#if 'DEV' in os.environ:
-#    DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.sqlite3',
-#             'NAME': BASE_DIR / 'db.sqlite3',
-#         }
-#    }
-#else:
-#    DATABASES = {
-#         'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-#    }
-    
 if 'DEV' not in os.environ:
-   REST_FRAMEWORK['DEFAULT_RENDERER_CLASSES'] = [
+    REST_FRAMEWORK['DEFAULT_RENDERER_CLASSES'] = [
         'rest_framework.renderers.JSONRenderer',
     ]
 
@@ -74,15 +61,12 @@ REST_AUTH_SERIALIZERS = {
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-#'DEV' in os.environ
-
-
+DEBUG = True
 
 
 ALLOWED_HOSTS = [
-os.environ.get('ALLOWED_HOST'),
-  'localhost',
+ os.environ.get('ALLOWED_HOST'),
+ 'localhost', '127.0.0.1'
 ]
 
 
@@ -127,14 +111,18 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CORS_ALLOWED_ORIGINS = []
+
+
 if 'CLIENT_ORIGIN' in os.environ:
-    CORS_ALLOWED_ORIGINS = [
-         os.environ.get('CLIENT_ORIGIN')
-    ]
+
+    CORS_ALLOWED_ORIGINS.append(os.environ.get('CLIENT_ORIGIN'))
+
 if 'CLIENT_ORIGIN_DEV' in os.environ:
-    CORS_ALLOWED_ORIGIN_REGEXES = [
-         r"^https:\/\/.*\.codeinstitute-ide\.net$",
-    ]
+
+    CORS_ALLOWED_ORIGINS.append(os.environ.get('CLIENT_ORIGIN_DEV'))
+
 CORS_ALLOW_CREDENTIALS = True
 
 ROOT_URLCONF = 'drf_api.urls'
@@ -158,21 +146,18 @@ TEMPLATES = [
 WSGI_APPLICATION = 'drf_api.wsgi.application'
 
 
-#Database
-#https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
 if 'DEV' in os.environ:
     DATABASES = {
-    'default': {
+     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+     }
     }
-}
 else:
     DATABASES = {
          'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
     }
-    
+
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeinstitute-ide.net/",
     "https://*.herokuapp.com"
