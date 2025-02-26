@@ -76,3 +76,10 @@ class VideoPostCommentDetailSerializer(CommentSerializer):
     Post is a read only field so that we dont have to set it on each update
     """
     video_post = serializers.ReadOnlyField(source='video_post.id')
+
+    class Meta:
+        model = VideoPostComment
+        fields = [
+            'id', 'owner', 'is_owner', 'profile_id', 'profile_image',
+            'video_post', 'created_at', 'updated_at', 'content'
+        ]
