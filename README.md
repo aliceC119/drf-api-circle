@@ -202,11 +202,18 @@ dictionary, populated with all the data specified in the URL.
   
 ### Validation Testing
 + Mostly all tests using the CI Python Linter. [CI Python Linter](https://pep8ci.herokuapp.com/#)
-+ There are unresolved E501 'line too long' issues in the `settings.py` file."
++ There are unresolved E501 'line too long' issues in the `settings.py` file.
   
   <img width="1214" alt="pep8" src="https://github.com/user-attachments/assets/33ff1f54-9472-463b-a661-40fa41a8fc06" />
 
++ There are unresolved E501 'line too long' issue in the `env.py` file.
+  
+  <img width="1104" alt="env" src="https://github.com/user-attachments/assets/b74fe8be-3ffb-4982-b8a4-8bf1efc2f920" />
+
 + Due to time constraints, only a limited number of automated tests could be performed.
+
+  <img width="220" alt="Screenshot 2025-02-26 at 08 56 28" src="https://github.com/user-attachments/assets/0ef4a118-26bc-460d-b71a-9b1942943b25" />
+
   
 ### Manual Test
 
